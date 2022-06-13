@@ -1,13 +1,7 @@
 sudo apt-get update
 sudo apt-get install flex bison
 
-mkdir final_compiler
-cd final_compiler
-
-sudo apt-get install git
-git clone https://github.com/gjlmotea/Compiler-sample.git
-
-cd Compiler-sample
+cd compiler-project
 
 lex lex.l
 yacc yacc.y
