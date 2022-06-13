@@ -7,8 +7,7 @@ cd final_compiler
 sudo apt-get install git
 git clone https://github.com/gjlmotea/Compiler-sample.git
 
-mv mytest.c final_compiler/Compiler-sample
-cd final_compiler/Compiler-sample
+cd Compiler-sample
 
 lex lex.l
 yacc yacc.y
