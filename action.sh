@@ -1,5 +1,5 @@
-sudo apt-get update
-sudo apt-get install flex bison
+sudo apt update
+sudo apt install flex bison
 
 cd compiler-project
 
@@ -8,7 +8,7 @@ yacc yacc.y
 yacc -d yacc.y
 cc lex.yy.c y.tab.c -o compiler1
 
-sudo apt-get update && sudo apt-get install gcc
+sudo apt update && sudo apt install gcc
 gcc -S -masm=intel mytest.c -o ass_intel
 
 echo
@@ -16,7 +16,7 @@ echo
 echo "---------------- assembly language (gcc) --------------------"
 cat ass_intel
 
-sudo apt-get install llvm clang
+sudo apt install llvm clang
 
 clang -S -emit-llvm mytest.c
 
