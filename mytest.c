@@ -1,5 +1,4 @@
-#include<stdio.h>
-#include<stdlib.h>
+
 int i=0,k,s[99999];
 int reverse(int k)
 {
