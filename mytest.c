@@ -1,27 +1,34 @@
-
-int i=0,k,s[99999];
-int reverse(int k)
-{
-	if(k>0)
-	{
-    	printf("%d ",s[i]);
-    	i--;
-    	reverse(k-1);
-	}
-}
-int array(int k)
-{
-    if(k>0)
-    {
-    	i++;
-    	scanf("%d",&s[i]);
-    	array(k-1);
-	}
-}
-
 int main()
 {
-	scanf("%d",&k);
-    array(k);
-	reverse(k);
+	int m;  
+	printf("輸入共有幾個字元排序:");
+	scanf("%d",&m);
+	
+	int i=0,n=strlen(list)-1; 
+	printf("輸入字元(不須空格):");
+	for(int k=-1;k<=m;k++)
+	{
+		scanf("%c",&list[k]);
+	}
+	
+	perm(list,i,n); 
+}
+
+void perm(char list[],int i,int n)    //遞迴   
+{     
+    if(i==n)
+    {
+    	for(int j=0;j<=n;j++)
+    		printf("%c",list[j]);
+    	printf("\n");
+	}
+	else
+    {
+    	for(int j=i;j<=n;j++)
+		{
+			swap(list[i],list[j]);
+			perm(list,i+1,n);
+			swap(list[i],list[j]);	
+		}   
+	}
 }
