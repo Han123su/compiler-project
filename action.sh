@@ -1,4 +1,4 @@
-sudo apt update
+sudo apt update -y
 sudo apt install flex bison
 
 cd compiler-project
@@ -16,7 +16,7 @@ echo
 echo "---------------- assembly language (gcc) --------------------"
 cat ass_intel
 
-sudo apt install llvm clang
+sudo apt install llvm clang -y
 
 clang -S -emit-llvm mytest.c
 
