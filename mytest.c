@@ -1,16 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+int i=0,k,s[99999];
+int reverse(int k)
+{
+	if(k>0)
+	{
+    	printf("%d ",s[i]);
+    	i--;
+    	reverse(k-1);
+	}
+}
+int array(int k)
+{
+    if(k>0)
+    {
+    	i++;
+    	scanf("%d",&s[i]);
+    	array(k-1);
+	}
+}
+
 int main()
 {
-	int N=5;
-	int i,j,k;
-		
-		for(k=1;k<=N;k++) 
-		{
-			for(i=N-k;i>=1;i--)  
-				printf("_");
-				
-			for(j=1;j<=k;j++)
-				printf("+");
-			printf("\n");		
-		} 
-	return 0;
-} 
+	scanf("%d",&k);
+    array(k);
+	reverse(k);
+}
