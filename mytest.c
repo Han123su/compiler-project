@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+void perm(char[],int,int); 
 int main()
 {
 	int m;  
