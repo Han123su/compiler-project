@@ -10,6 +10,7 @@ cc lex.yy.c y.tab.c -o compiler1
 
 sudo apt update && sudo apt install gcc
 gcc -S -masm=intel mytest.c -o ass_intel
+gcc -o mytest_gcc mytest.c
 
 echo
 echo
